@@ -125,7 +125,7 @@
 		         <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
 		       </configuration>
 		   </execution>
-		   <execujtion>
+		   <execution>
 		    <id>default-check</id>
 			<goals>
 			  <goal>check</goal>
