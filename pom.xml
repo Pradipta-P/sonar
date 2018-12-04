@@ -105,33 +105,25 @@
 	     <groupId>org.jacoco</groupId>
 	     <artifactId>jacoco-maven-plugin</artifactId>
 	     <version>0.8.2</version>
-         <executions>
-		   <execution>
-		   <id>default-prepare-agent</id>
-			   <goals>
-			     <goal>prepare-agent</goal>
-			   </goals>
-			   <configuration>
+              <configuration>
 		         <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+				 <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
 		       </configuration>
-		   </execution>
+		   <executions>
 		   <execution>
+		    <id>jacoco-initialize</id>
+			<goals>
+			<goal>prepare-agent</goal>
+			</goals>
+			</execution>
+			<execution>
 		     <id>jacoco-site</id>
-			 <phase>prepare-package</phase>
+			 <phase>package</phase>
 			 <goals>
 			   <goal>report</goal>
 			 </goals>
-			  <configuration>
-		         <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
-		       </configuration>
 		   </execution>
-		   <execution>
-		    <id>default-check</id>
-			<goals>
-			  <goal>check</goal>
-			</goals>
-		   </execution>
-		 </executions>
+		  </executions>
 	   </plugin>
       </plugins>
     <!--</pluginManagement>-->
