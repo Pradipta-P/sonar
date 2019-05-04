@@ -10,7 +10,7 @@ pipeline {
                dir ('workspace/Job_pipeline/sonar'){
                   
                
-                sh 'mvn clean compille --file pom.xml'
+                sh 'bat mvn clean compille'
             }
             }
         }
